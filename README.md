@@ -1,5 +1,5 @@
-# DOG-guard-website
-A dog guard website made with HTML/CSS &amp; JavaScript
+# DOG-guard-center-website
+A Dog guard center website made with HTML/CSS &amp; JavaScript
 
 check live demo here: https://elastic-wing-3c220e.netlify.app
 • which is Hosted at Netlify.
