@@ -25,6 +25,22 @@ closeMenuToggle.addEventListener('click', () => {
     }
 })
 
+// Change desktop image based on device width
+
+const imageMobile = 'https://github.com/r-e-d-ant/DOG-guard-website/blob/main/assets/images/dog_mobile_pink.png?raw=true';
+const imageDesktop = 'https://github.com/r-e-d-ant/DOG-guard-website/blob/main/assets/images/dog_image_in_blob.png?raw=true';
+
+const changeHomeImage = (x) => {
+  if(x.matches){
+    homeImage.src = imageDesktop;
+  }else {
+    homeImage.src = imageMobile;
+  }
+}
+const x = window.matchMedia('(min-width: 780px)');
+changeHomeImage(x)
+x.addListener(changeHomeImage);
+
 // --------- DARK MODE ACTIVATION ----------
 let darkMode = localStorage.getItem('darkmode');
 const darkModeToggle = document.querySelector('.themecolor');
