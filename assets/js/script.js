@@ -2,6 +2,7 @@
 const navBar = document.querySelector('.navbar');
 const openMenuToggle = document.querySelector('.bx-menu');
 const closeMenuToggle = document.querySelector('.bx-x');
+const homeImage = document.querySelector('.img_home');
 
 // --- OPEN MENU
 
@@ -39,7 +40,12 @@ const changeHomeImage = (x) => {
 }
 const x = window.matchMedia('(min-width: 780px)');
 changeHomeImage(x)
-x.addListener(changeHomeImage);
+
+try {
+    x.addListener(changeHomeImage);
+}catch(e){
+    x.addEventListener(changeHomeImage);
+}
 
 // --------- DARK MODE ACTIVATION ----------
 let darkMode = localStorage.getItem('darkmode');
